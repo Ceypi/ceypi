@@ -22,26 +22,60 @@
   <text class="vintage" x="400" y="400">My mind.</text>
 
   <!-- Floating C++ -->
-  <text class="floating" x="400" y="300">
-    C++
-    <animateTransform 
-      attributeName="transform" 
-      type="rotate" 
-      from="0 400 400" 
-      to="360 400 400" 
-      dur="5s" 
-      repeatCount="indefinite" />
-  </text>
+  <g>
+    <text class="floating">
+      C++
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="0 400 400" 
+        to="360 400 400" 
+        dur="5s" 
+        repeatCount="indefinite" />
+    </text>
+  </g>
 
   <!-- Floating Lua -->
-  <text class="floating" x="400" y="500">
-    Lua
-    <animateTransform 
-      attributeName="transform" 
-      type="rotate" 
-      from="0 400 400" 
-      to="360 400 400" 
-      dur="5s" 
-      repeatCount="indefinite" />
-  </text>
+  <g>
+    <text class="floating">
+      Lua
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="0 400 400" 
+        to="360 400 400" 
+        dur="5s" 
+        repeatCount="indefinite" />
+    </text>
+  </g>
+
+  <!-- Positioning the texts around the center -->
+  <g>
+    <text class="floating" x="400" y="280">
+      C++
+      <animate 
+        attributeName="x" 
+        values="400; 470; 400; 330; 400" 
+        dur="5s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="y" 
+        values="280; 400; 520; 400; 280" 
+        dur="5s" 
+        repeatCount="indefinite" />
+    </text>
+    <text class="floating" x="400" y="520">
+      Lua
+      <animate 
+        attributeName="x" 
+        values="400; 470; 400; 330; 400" 
+        dur="5s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="y" 
+        values="520; 400; 280; 400; 520" 
+        dur="5s" 
+        repeatCount="indefinite" />
+    </text>
+  </g>
 </svg>
