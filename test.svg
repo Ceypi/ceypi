@@ -7,7 +7,7 @@
       <rect y="50" width="50" height="50" fill="white" />
       <rect x="50" y="50" width="50" height="50" fill="black" />
     </pattern>
-    
+
     <!-- Inverse checker pattern definition -->
     <pattern id="inverse-checkers" patternUnits="userSpaceOnUse" width="100" height="100">
       <rect width="50" height="50" fill="white" />
@@ -16,24 +16,25 @@
       <rect x="50" y="50" width="50" height="50" fill="white" />
     </pattern>
 
-    <!-- Heart pattern definition -->
-    <pattern id="hearts" patternUnits="userSpaceOnUse" width="100" height="100">
-      <path d="M50 30
-               C 40 10, 10 10, 10 40
-               C 10 60, 50 90, 50 90
-               C 50 90, 90 60, 90 40
-               C 90 10, 60 10, 50 30
-               Z" fill="red" transform="scale(0.5) translate(25,25)" />
+    <!-- Stripes pattern definition -->
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="white" />
+      <rect width="20" height="100" fill="black" />
+      <rect x="40" width="20" height="100" fill="black" />
+      <rect x="80" width="20" height="100" fill="black" />
     </pattern>
 
-    <!-- Inverse heart pattern definition -->
-    <pattern id="inverse-hearts" patternUnits="userSpaceOnUse" width="100" height="100">
-      <path d="M50 30
-               C 40 10, 10 10, 10 40
-               C 10 60, 50 90, 50 90
-               C 50 90, 90 60, 90 40
-               C 90 10, 60 10, 50 30
-               Z" fill="white" transform="scale(0.5) translate(25,25)" />
+    <!-- Dots pattern definition -->
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="50" height="50">
+      <rect width="50" height="50" fill="white" />
+      <circle cx="25" cy="25" r="10" fill="black" />
+    </pattern>
+
+    <!-- Diagonal lines pattern definition -->
+    <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="white" />
+      <line x1="0" y1="100" x2="100" y2="0" stroke="black" stroke-width="2" />
+      <line x1="0" y1="0" x2="100" y2="100" stroke="black" stroke-width="2" />
     </pattern>
   </defs>
 
@@ -60,24 +61,30 @@
       repeatCount="indefinite" />
   </rect>
 
-  <!-- Heart pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#hearts)">
+  <!-- Stripes pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#stripes)">
     <animate 
       attributeName="opacity" 
       values="0; 1; 0" 
       dur="2s" 
-      begin="60s; heart-animation.end" 
-      repeatCount="indefinite" 
-      id="heart-animation" />
+      repeatCount="indefinite" />
   </rect>
 
-  <!-- Inverse heart pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#inverse-hearts)">
+  <!-- Dots pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#dots)">
     <animate 
       attributeName="opacity" 
       values="1; 0; 1" 
       dur="2s" 
-      begin="60s; heart-animation.end" 
+      repeatCount="indefinite" />
+  </rect>
+
+  <!-- Diagonal lines pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#diagonal-lines)">
+    <animate 
+      attributeName="opacity" 
+      values="0; 1; 0" 
+      dur="2s" 
       repeatCount="indefinite" />
   </rect>
 </svg>
