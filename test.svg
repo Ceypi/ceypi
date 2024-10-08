@@ -10,14 +10,31 @@
       <stop offset="100%" style="stop-color:#3357ff; stop-opacity:0" />
     </radialGradient>
   </defs>
+
   <g fill="none" stroke="url(#grad1)" stroke-width="5">
-    <path d="M 400 100 C 100 400, 700 400, 400 700 C 100 100, 700 100, 400 400 Z" />
-    <path d="M 300 200 C 200 500, 600 300, 500 600 C 400 300, 100 500, 300 200 Z" />
-    <path d="M 500 100 C 600 400, 200 400, 300 700 C 600 100, 100 200, 500 100 Z" />
+    <!-- Orbit Paths -->
+    <circle cx="400" cy="400" r="250" stroke-opacity="0.3" />
+    <circle cx="400" cy="400" r="300" stroke-opacity="0.3" />
+    <circle cx="400" cy="400" r="350" stroke-opacity="0.3" />
+    
+    <!-- Orbiting Planets -->
+    <g class="planet" id="planet1" fill="#ff5733">
+      <circle cx="650" cy="400" r="30" />
+    </g>
+    <g class="planet" id="planet2" fill="#33ff57">
+      <circle cx="400" cy="150" r="40" />
+    </g>
+    <g class="planet" id="planet3" fill="#3357ff">
+      <circle cx="150" cy="400" r="50" />
+    </g>
   </g>
+
+  <!-- Background Circle -->
   <g fill="url(#radial1)">
     <circle cx="400" cy="400" r="300" />
   </g>
+  
+  <!-- Overlay Gradient -->
   <g opacity="0.5">
     <rect width="800" height="800" fill="url(#grad1)" />
   </g>
