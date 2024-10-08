@@ -7,7 +7,7 @@
       <rect y="50" width="50" height="50" fill="white" />
       <rect x="50" y="50" width="50" height="50" fill="black" />
     </pattern>
-
+    
     <!-- Inverse checker pattern definition -->
     <pattern id="inverse-checkers" patternUnits="userSpaceOnUse" width="100" height="100">
       <rect width="50" height="50" fill="white" />
@@ -19,32 +19,22 @@
 
   <!-- Background with animated fill -->
   <rect width="100%" height="100%">
-    <animate attributeName="fill" values="white; black; white" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="white; black; white" dur="2s" repeatCount="indefinite" />
   </rect>
-
   <!-- Checker pattern overlay -->
-  <g id="squares">
-    <!-- Set of squares that will change positions -->
-    <rect class="black-square" x="100" y="100" width="50" height="50" fill="black" />
-    <rect class="black-square" x="300" y="200" width="50" height="50" fill="black" />
-    <rect class="black-square" x="500" y="300" width="50" height="50" fill="black" />
-    <rect class="black-square" x="200" y="400" width="50" height="50" fill="black" />
-    <rect class="black-square" x="400" y="500" width="50" height="50" fill="black" />
-    <rect class="black-square" x="600" y="600" width="50" height="50" fill="black" />
-    <rect class="white-square" x="150" y="150" width="50" height="50" fill="white" />
-    <rect class="white-square" x="350" y="250" width="50" height="50" fill="white" />
-    <rect class="white-square" x="550" y="350" width="50" height="50" fill="white" />
-    <rect class="white-square" x="250" y="450" width="50" height="50" fill="white" />
-    <rect class="white-square" x="450" y="550" width="50" height="50" fill="white" />
-    <rect class="white-square" x="650" y="650" width="50" height="50" fill="white" />
-  </g>
-
-  <animateTransform 
-    xlink:href="#squares" 
-    attributeName="transform" 
-    type="translate" 
-    values="0,0; 20,20; -20,-20; 0,0; -20,20; 20,-20" 
-    dur="4s" 
-    repeatCount="indefinite" 
-    begin="0s" />
+  <rect width="100%" height="100%" fill="url(#checkers)">
+    <animate 
+      attributeName="opacity" 
+      values="0; 1; 0" 
+      dur="2s" 
+      repeatCount="indefinite" />
+  </rect>
+  <!-- Inverse checker pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#inverse-checkers)">
+    <animate 
+      attributeName="opacity" 
+      values="1; 0; 1" 
+      dur="2s" 
+      repeatCount="indefinite" />
+  </rect>
 </svg>
