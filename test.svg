@@ -19,6 +19,6 @@
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="40">
     <animate attributeName="fill" values="white; red; blue; white" dur="4s" repeatCount="indefinite" />
     <animate attributeName="font-size" values="40; 60; 40" dur="4s" repeatCount="indefinite" />
-    Dynamic Text
+\(0-0)/
   </text>
 </svg>
