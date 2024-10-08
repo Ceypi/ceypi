@@ -16,9 +16,11 @@
     <animateTransform attributeName="transform" type="translate" from="0 0" to="50 50" dur="4s" repeatCount="indefinite" />
   </rect>
 
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="40">
-    <animate attributeName="fill" values="white; red; blue; white" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="font-size" values="40; 60; 40" dur="4s" repeatCount="indefinite" />
-\(0-0)/
-  </text>
+  <!-- Heart Shape -->
+  <path d="M 400 600 C 300 500, 200 400, 400 300 C 600 400, 700 500, 600 600 C 400 700, 400 700, 400 600 Z"
+        fill="white">
+    <animate attributeName="fill" values="white; pink; red; white" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="transform" type="scale" from="1 1" to="1.2 1.2" dur="2s" begin="0s" repeatCount="indefinite" />
+    <animate attributeName="transform" type="scale" from="1.2 1.2" to="1 1" dur="2s" begin="2s" repeatCount="indefinite" />
+  </path>
 </svg>
