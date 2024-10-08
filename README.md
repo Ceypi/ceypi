@@ -1,5 +1,14 @@
-![Ceypi's Stats](https://github-readme-stats.vercel.app/api?username=Ceypi&theme=prussian&show_icons=true&hide_border=true&count_private=true)
+<h1 align="center">
+  <span style="animation: fadeIn 3s infinite;">I am interested in </span>
+  <span style="animation: fadeIn 3s infinite 1s;">C++</span>
+  <span style="animation: fadeIn 3s infinite 2s;"> and </span>
+  <span style="animation: fadeIn 3s infinite 3s;">Lua</span>
+</h1>
 
-![Ceypi's Streak](https://github-readme-streak-stats.herokuapp.com/?user=Ceypi&theme=prussian&hide_border=true)
-
-![Ceypi's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Ceypi&theme=prussian&show_icons=true&hide_border=true&layout=compact)
+<style>
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
