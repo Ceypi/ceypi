@@ -1,41 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
   <defs>
-    <!-- Checker pattern definition -->
-    <pattern id="checkers" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="50" height="50" fill="black" />
-      <rect x="50" width="50" height="50" fill="white" />
-      <rect y="50" width="50" height="50" fill="white" />
-      <rect x="50" y="50" width="50" height="50" fill="black" />
-    </pattern>
-
-    <!-- Inverse checker pattern definition -->
-    <pattern id="inverse-checkers" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="50" height="50" fill="white" />
-      <rect x="50" width="50" height="50" fill="black" />
-      <rect y="50" width="50" height="50" fill="black" />
-      <rect x="50" y="50" width="50" height="50" fill="white" />
-    </pattern>
-
-    <!-- Stripes pattern definition -->
-    <pattern id="stripes" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="100" height="100" fill="white" />
-      <rect width="20" height="100" fill="black" />
-      <rect x="40" width="20" height="100" fill="black" />
-      <rect x="80" width="20" height="100" fill="black" />
-    </pattern>
-
-    <!-- Dots pattern definition -->
-    <pattern id="dots" patternUnits="userSpaceOnUse" width="50" height="50">
-      <rect width="50" height="50" fill="white" />
-      <circle cx="25" cy="25" r="10" fill="black" />
-    </pattern>
-
-    <!-- Diagonal lines pattern definition -->
-    <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="100" height="100" fill="white" />
-      <line x1="0" y1="100" x2="100" y2="0" stroke="black" stroke-width="2" />
-      <line x1="0" y1="0" x2="100" y2="100" stroke="black" stroke-width="2" />
-    </pattern>
+    <!-- Existing patterns here -->
+    <pattern id="checkers" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="inverse-checkers" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="50" height="50">...</pattern>
+    <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    
+    <!-- New patterns -->
+    <pattern id="honeycomb" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="waves" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="crosshatch" patternUnits="userSpaceOnUse" width="20" height="20">...</pattern>
+    <pattern id="spiral" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
+    <pattern id="vines" patternUnits="userSpaceOnUse" width="100" height="100">...</pattern>
   </defs>
 
   <!-- Background with animated fill -->
@@ -43,48 +20,37 @@
     <animate attributeName="fill" values="white; black; white" dur="2s" repeatCount="indefinite" />
   </rect>
 
-  <!-- Checker pattern overlay -->
+  <!-- Existing pattern overlays -->
   <rect width="100%" height="100%" fill="url(#checkers)">
-    <animate 
-      attributeName="opacity" 
-      values="0; 1; 0" 
-      dur="2s" 
-      repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
   </rect>
-
-  <!-- Inverse checker pattern overlay -->
   <rect width="100%" height="100%" fill="url(#inverse-checkers)">
-    <animate 
-      attributeName="opacity" 
-      values="1; 0; 1" 
-      dur="2s" 
-      repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
   </rect>
-
-  <!-- Stripes pattern overlay -->
   <rect width="100%" height="100%" fill="url(#stripes)">
-    <animate 
-      attributeName="opacity" 
-      values="0; 1; 0" 
-      dur="2s" 
-      repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
   </rect>
-
-  <!-- Dots pattern overlay -->
   <rect width="100%" height="100%" fill="url(#dots)">
-    <animate 
-      attributeName="opacity" 
-      values="1; 0; 1" 
-      dur="2s" 
-      repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
   </rect>
-
-  <!-- Diagonal lines pattern overlay -->
   <rect width="100%" height="100%" fill="url(#diagonal-lines)">
-    <animate 
-      attributeName="opacity" 
-      values="0; 1; 0" 
-      dur="2s" 
-      repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- New pattern overlays -->
+  <rect width="100%" height="100%" fill="url(#honeycomb)">
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <rect width="100%" height="100%" fill="url(#waves)">
+    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <rect width="100%" height="100%" fill="url(#crosshatch)">
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <rect width="100%" height="100%" fill="url(#spiral)">
+    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <rect width="100%" height="100%" fill="url(#vines)">
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
   </rect>
 </svg>
