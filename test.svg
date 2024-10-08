@@ -17,35 +17,39 @@
     <circle cx="400" cy="400" r="250" stroke-opacity="0.3" />
     <circle cx="400" cy="400" r="150" stroke-opacity="0.3" />
     
-    <!-- Big Planet -->
+    <!-- Big Planet in the Center -->
     <g class="planet" id="planetBig" fill="#3357ff">
-      <circle cx="400" cy="50" r="50" />
+      <circle cx="400" cy="400" r="50" />
     </g>
     
-    <!-- Medium Planet with Animation -->
+    <!-- Medium Planet with Animation orbiting the Big Planet -->
     <g class="planet" id="planetMedium" fill="#33ff57">
-      <circle cx="400" cy="150" r="40" >
-        <animateTransform 
-          attributeName="transform" 
-          type="rotate" 
-          from="0 400 400" 
-          to="360 400 400" 
-          dur="10s" 
-          repeatCount="indefinite" />
-      </circle>
+      <g transform="translate(0, -250)">
+        <circle cx="0" cy="0" r="40" >
+          <animateTransform 
+            attributeName="transform" 
+            type="rotate" 
+            from="0 400 400" 
+            to="360 400 400" 
+            dur="10s" 
+            repeatCount="indefinite" />
+        </circle>
+      </g>
     </g>
     
     <!-- Small Planet orbiting the Medium Planet -->
     <g class="planet" id="planetSmall" fill="#ff5733">
-      <circle cx="400" cy="190" r="30">
-        <animateTransform 
-          attributeName="transform" 
-          type="rotate" 
-          from="0 400 400" 
-          to="360 400 400" 
-          dur="3s" 
-          repeatCount="indefinite" />
-      </circle>
+      <g transform="translate(0, -190)">
+        <circle cx="0" cy="0" r="30">
+          <animateTransform 
+            attributeName="transform" 
+            type="rotate" 
+            from="0 0 0" 
+            to="360 0 0" 
+            dur="3s" 
+            repeatCount="indefinite" />
+        </circle>
+      </g>
     </g>
   </g>
 
