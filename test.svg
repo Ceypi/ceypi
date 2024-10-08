@@ -44,23 +44,4 @@
       dur="5s" 
       repeatCount="indefinite" />
   </text>
-
-  <!-- Adjusted for upright positioning -->
-  <animateTransform 
-    attributeName="transform" 
-    type="rotate" 
-    from="0 400 400" 
-    to="360 400 400" 
-    dur="5s" 
-    repeatCount="indefinite" 
-    additive="sum" />
-  
-  <animateTransform 
-    attributeName="transform" 
-    type="rotate" 
-    from="0 400 400" 
-    to="360 400 400" 
-    dur="5s" 
-    repeatCount="indefinite" 
-    additive="sum" />
 </svg>
