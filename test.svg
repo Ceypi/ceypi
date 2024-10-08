@@ -24,13 +24,13 @@
     
     <!-- Medium Planet with Animation orbiting the Big Planet -->
     <g class="planet" id="planetMedium" fill="#33ff57">
-      <g transform="rotate(0 400 400)">
+      <g transform="translate(400, 400)">
         <circle cx="0" cy="-250" r="40">
           <animateTransform 
             attributeName="transform" 
             type="rotate" 
-            from="0 400 400" 
-            to="360 400 400" 
+            from="0 0 0" 
+            to="360 0 0" 
             dur="10s" 
             repeatCount="indefinite" />
         </circle>
@@ -39,7 +39,7 @@
     
     <!-- Small Planet orbiting the Medium Planet -->
     <g class="planet" id="planetSmall" fill="#ff5733">
-      <g transform="rotate(0 0 0)">
+      <g transform="translate(400, 400)">
         <circle cx="0" cy="-190" r="30">
           <animateTransform 
             attributeName="transform" 
