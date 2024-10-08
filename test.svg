@@ -15,12 +15,33 @@
       <rect y="50" width="50" height="50" fill="black" />
       <rect x="50" y="50" width="50" height="50" fill="white" />
     </pattern>
+
+    <!-- Heart pattern definition -->
+    <pattern id="hearts" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M50 30
+               C 40 10, 10 10, 10 40
+               C 10 60, 50 90, 50 90
+               C 50 90, 90 60, 90 40
+               C 90 10, 60 10, 50 30
+               Z" fill="red" transform="scale(0.5) translate(25,25)" />
+    </pattern>
+
+    <!-- Inverse heart pattern definition -->
+    <pattern id="inverse-hearts" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M50 30
+               C 40 10, 10 10, 10 40
+               C 10 60, 50 90, 50 90
+               C 50 90, 90 60, 90 40
+               C 90 10, 60 10, 50 30
+               Z" fill="white" transform="scale(0.5) translate(25,25)" />
+    </pattern>
   </defs>
 
   <!-- Background with animated fill -->
   <rect width="100%" height="100%">
     <animate attributeName="fill" values="white; black; white" dur="2s" repeatCount="indefinite" />
   </rect>
+
   <!-- Checker pattern overlay -->
   <rect width="100%" height="100%" fill="url(#checkers)">
     <animate 
@@ -29,12 +50,34 @@
       dur="2s" 
       repeatCount="indefinite" />
   </rect>
+
   <!-- Inverse checker pattern overlay -->
   <rect width="100%" height="100%" fill="url(#inverse-checkers)">
     <animate 
       attributeName="opacity" 
       values="1; 0; 1" 
       dur="2s" 
+      repeatCount="indefinite" />
+  </rect>
+
+  <!-- Heart pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#hearts)">
+    <animate 
+      attributeName="opacity" 
+      values="0; 1; 0" 
+      dur="2s" 
+      begin="60s; heart-animation.end" 
+      repeatCount="indefinite" 
+      id="heart-animation" />
+  </rect>
+
+  <!-- Inverse heart pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#inverse-hearts)">
+    <animate 
+      attributeName="opacity" 
+      values="1; 0; 1" 
+      dur="2s" 
+      begin="60s; heart-animation.end" 
       repeatCount="indefinite" />
   </rect>
 </svg>
