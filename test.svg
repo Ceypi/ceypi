@@ -11,55 +11,43 @@
     </radialGradient>
   </defs>
 
-  <g fill="none" stroke="url(#grad1)" stroke-width="5">
+  <g fill="none" stroke="url(#grad1)" stroke-width="2">
     <!-- Orbit Paths -->
-    <circle cx="400" cy="400" r="350" stroke-opacity="0.3" />
-    <circle cx="400" cy="400" r="250" stroke-opacity="0.3" />
-    <circle cx="400" cy="400" r="150" stroke-opacity="0.3" />
+    <circle cx="400" cy="400" r="300" stroke-opacity="0.2" />
+    <circle cx="400" cy="400" r="200" stroke-opacity="0.2" />
+    <circle cx="400" cy="400" r="100" stroke-opacity="0.2" />
     
     <!-- Big Planet in the Center -->
-    <g class="planet" id="planetBig" fill="#3357ff">
-      <circle cx="400" cy="400" r="50" />
-    </g>
+    <circle cx="400" cy="400" r="40" fill="#3357ff" />
     
-    <!-- Medium Planet with Animation orbiting the Big Planet -->
-    <g class="planet" id="planetMedium" fill="#33ff57">
-      <g transform="translate(400, 400)">
-        <circle cx="0" cy="-250" r="40">
-          <animateTransform 
-            attributeName="transform" 
-            type="rotate" 
-            from="0 0 0" 
-            to="360 0 0" 
-            dur="10s" 
-            repeatCount="indefinite" />
-        </circle>
-      </g>
-    </g>
+    <!-- Medium Planet orbiting the Big Planet -->
+    <circle cx="400" cy="150" r="30" fill="#33ff57">
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="0 400 400" 
+        to="360 400 400" 
+        dur="10s" 
+        repeatCount="indefinite" />
+    </circle>
     
     <!-- Small Planet orbiting the Medium Planet -->
-    <g class="planet" id="planetSmall" fill="#ff5733">
-      <g transform="translate(400, 400)">
-        <circle cx="0" cy="-190" r="30">
-          <animateTransform 
-            attributeName="transform" 
-            type="rotate" 
-            from="0 0 0" 
-            to="360 0 0" 
-            dur="3s" 
-            repeatCount="indefinite" />
-        </circle>
-      </g>
-    </g>
+    <circle cx="400" cy="100" r="20" fill="#ff5733">
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="0 400 150" 
+        to="360 400 150" 
+        dur="3s" 
+        repeatCount="indefinite" />
+    </circle>
   </g>
 
   <!-- Background Circle -->
-  <g fill="url(#radial1)">
-    <circle cx="400" cy="400" r="300" />
-  </g>
-  
+  <circle cx="400" cy="400" r="300" fill="url(#radial1)" />
+
   <!-- Overlay Gradient -->
-  <g opacity="0.5">
+  <g opacity="0.4">
     <rect width="800" height="800" fill="url(#grad1)" />
   </g>
 </svg>
