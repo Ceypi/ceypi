@@ -22,40 +22,25 @@
   <text class="vintage" x="400" y="400">My mind.</text>
 
   <!-- Floating C++ -->
-  <text class="floating" x="400" y="200">
+  <text class="floating" x="400" y="300">
     C++
-    <animate 
-      attributeName="y" 
-      values="200; 100; 200" 
-      dur="3s" 
-      repeatCount="indefinite" />
-  </text>
-
-  <!-- Floating Lua -->
-  <text class="floating" x="400" y="600">
-    Lua
-    <animate 
-      attributeName="y" 
-      values="600; 500; 600" 
-      dur="3s" 
-      repeatCount="indefinite" />
-  </text>
-
-  <!-- Additional floating animations -->
-  <text class="floating" x="300" y="300">
-    C++
-    <animate 
-      attributeName="x" 
-      values="300; 200; 300" 
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate" 
+      from="0 400 400" 
+      to="360 400 400" 
       dur="5s" 
       repeatCount="indefinite" />
   </text>
 
-  <text class="floating" x="500" y="500">
+  <!-- Floating Lua -->
+  <text class="floating" x="400" y="500">
     Lua
-    <animate 
-      attributeName="x" 
-      values="500; 600; 500" 
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate" 
+      from="0 400 400" 
+      to="360 400 400" 
       dur="5s" 
       repeatCount="indefinite" />
   </text>
