@@ -1,66 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
   <defs>
-    <!-- Checker pattern definition -->
-    <pattern id="checkers" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="50" height="50" fill="black" />
-      <rect x="50" width="50" height="50" fill="cyan" />
-      <rect y="50" width="50" height="50" fill="cyan" />
-      <rect x="50" y="50" width="50" height="50" fill="black" />
-    </pattern>
-
-    <!-- Inverse checker pattern definition -->
-    <pattern id="inverse-checkers" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="50" height="50" fill="cyan" />
-      <rect x="50" width="50" height="50" fill="black" />
-      <rect y="50" width="50" height="50" fill="black" />
-      <rect x="50" y="50" width="50" height="50" fill="cyan" />
-    </pattern>
-
-    <!-- Stripes pattern definition -->
-    <pattern id="stripes" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="100" height="100" fill="black" />
-      <rect width="20" height="100" fill="cyan" />
-      <rect x="40" width="20" height="100" fill="cyan" />
-      <rect x="80" width="20" height="100" fill="cyan" />
-    </pattern>
-
-    <!-- Dots pattern definition -->
-    <pattern id="dots" patternUnits="userSpaceOnUse" width="50" height="50">
-      <rect width="50" height="50" fill="white" />
-      <circle cx="25" cy="25" r="10" fill="cyan" />
-    </pattern>
-
-    <!-- Diagonal lines pattern definition -->
-    <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="100" height="100" fill="white" />
-      <line x1="0" y1="100" x2="100" y2="0" stroke="cyan" stroke-width="2" />
-      <line x1="0" y1="0" x2="100" y2="100" stroke="cyan" stroke-width="2" />
-    </pattern>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="red">
+        <animate attributeName="stop-color" values="red; blue; green; red" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="yellow" />
+    </linearGradient>
   </defs>
 
-  <!-- Background with animated gradient fill -->
-  <rect width="100%" height="100%">
-    <animate attributeName="fill" values="white; black; white; black" dur="4s" repeatCount="indefinite" />
+  <rect width="100%" height="100%" fill="url(#gradient)">
+    <animate attributeName="opacity" values="1; 0.8; 1" dur="4s" repeatCount="indefinite" />
   </rect>
 
-  <!-- Checker pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#checkers)" transform="rotate(0)">
-    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="4s" repeatCount="indefinite" />
+  <rect width="100%" height="100%" fill="url(#checkers)" opacity="0.5">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="50 50" dur="4s" repeatCount="indefinite" />
   </rect>
 
-  <!-- Inverse checker pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#inverse-checkers)" transform="rotate(0)">
-    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="-360 400 400" dur="4s" repeatCount="indefinite" />
-  </rect>
-
-  <!-- Stripes pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#stripes)" transform="rotate(0)">
-    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="4s" repeatCount="indefinite" />
-  </rect>
-
-  <!-- Dots pattern overlay -->
-  <rect width="100%" height="100%" fill="url(#dots)" transform="rotate(0)">
-    <animate attributeName
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="40">
+    <animate attributeName="fill" values="white; red; blue; white" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="font-size" values="40; 60; 40" dur="4s" repeatCount="indefinite" />
+    Dynamic Text
+  </text>
+</svg>
